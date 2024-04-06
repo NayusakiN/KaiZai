@@ -1,0 +1,128 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ApiGateways", "ApiGateways", "{D4263C1F-3E25-4EF0-AB65-03A4A6D0FDBD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "KaiZai.Web.Bff", "KaiZai.Web.Bff", "{6E08B436-E6FF-4414-A85B-59D8AC027B44}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web.HttpAggregator", "ApiGateways\KaiZai.Web.Bff\aggregator\Web.HttpAggregator.csproj", "{FEEF7656-92E4-462C-B516-C41BD00757C9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{0B23D75D-C8FE-48E7-901B-09026FC8B07E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KaiZai.Common.Types", "Common\KaiZai.Common.Types\KaiZai.Common.Types.csproj", "{5F1C238C-B7F3-4EEC-B757-BE8CAE0A43D6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{C2AB99D1-6F31-4D77-AF3F-F8D6E31CCF25}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "KaiZai.Service.Categories", "KaiZai.Service.Categories", "{17898BC2-B0A3-4742-8F85-523DC08B0107}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KaiZai.Service.Categories.API", "Services\KaiZai.Service.Categories\KaiZai.Service.Categories.API\KaiZai.Service.Categories.API.csproj", "{07C20F57-75D0-444F-8BBD-EA2A9C2712B3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KaiZai.Service.Categories.API.IntegrationTests", "Services\KaiZai.Service.Categories\KaiZai.Service.Categories.API.IntegrationTests\KaiZai.Service.Categories.API.IntegrationTests.csproj", "{9E2824AE-EFE1-4486-992D-4274C9886F3B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KaiZai.Service.Categories.Contracts", "Services\KaiZai.Service.Categories\KaiZai.Service.Categories.Contracts\KaiZai.Service.Categories.Contracts.csproj", "{ADDA37E6-16C3-414F-A8E7-5DE3A4882A4A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KaiZai.Service.Categories.UnitTests", "Services\KaiZai.Service.Categories\KaiZai.Service.Categories.UnitTests\KaiZai.Service.Categories.UnitTests.csproj", "{3DF4A83A-0EF8-4CD1-A37B-E8FB828D8C01}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KaiZai.Service.Incomes.DAL", "Services\KaiZai.Service.Incomes\KaiZai.Service.Incomes.DAL\KaiZai.Service.Incomes.DAL.csproj", "{9B4F6D5A-BCDE-44D5-9C88-4BDA30BB6BD1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "KaiZai.Service.Incomes", "KaiZai.Service.Incomes", "{A8204CE0-FE88-445A-887B-4A2D92D9D78F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KaiZai.Service.Incomes.CL", "Services\KaiZai.Service.Incomes\KaiZai.Service.Incomes.CL\KaiZai.Service.Incomes.CL.csproj", "{5993A41F-BBBB-4885-AEE6-E77F8704F506}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KaiZai.Service.Incomes.BAL", "Services\KaiZai.Service.Incomes\KaiZai.Service.Incomes.BAL\KaiZai.Service.Incomes.BAL.csproj", "{7760C7D3-806E-44EC-8E75-40493A4B234B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KaiZai.Service.Incomes.API", "Services\KaiZai.Service.Incomes\KaiZai.Service.Incomes.API\KaiZai.Service.Incomes.API.csproj", "{C1A91669-05C0-4E2A-9DD4-87ABEE163040}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{EDA39353-B1A1-4460-8EAC-C502101A5164}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KaiZai.WebSPA", "Web\KaiZai.WebSPA\KaiZai.WebSPA.csproj", "{CD676AA7-4030-4D4A-87C4-8435A3CD4CE0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services.Common", "Services.Common", "{08BC1AD7-7A4C-47DF-9A1B-31FC63122BCC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KaiZai.Service.Common.MessageExchangeBaseConfigurator", "Services.Common\KaiZai.Service.Common.MessageExchangeBaseConfigurator\KaiZai.Service.Common.MessageExchangeBaseConfigurator.csproj", "{4BA812BD-C975-4E9F-853B-F1117AB0157B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KaiZai.Service.Common.MongoDataAccessRepository", "Services.Common\KaiZai.Service.Common.MongoDataAccessRepository\KaiZai.Service.Common.MongoDataAccessRepository.csproj", "{60E384C7-5C92-4CEE-9F3C-2DB92D6B3609}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FEEF7656-92E4-462C-B516-C41BD00757C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEEF7656-92E4-462C-B516-C41BD00757C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEEF7656-92E4-462C-B516-C41BD00757C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEEF7656-92E4-462C-B516-C41BD00757C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F1C238C-B7F3-4EEC-B757-BE8CAE0A43D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F1C238C-B7F3-4EEC-B757-BE8CAE0A43D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F1C238C-B7F3-4EEC-B757-BE8CAE0A43D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F1C238C-B7F3-4EEC-B757-BE8CAE0A43D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07C20F57-75D0-444F-8BBD-EA2A9C2712B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07C20F57-75D0-444F-8BBD-EA2A9C2712B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07C20F57-75D0-444F-8BBD-EA2A9C2712B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07C20F57-75D0-444F-8BBD-EA2A9C2712B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E2824AE-EFE1-4486-992D-4274C9886F3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E2824AE-EFE1-4486-992D-4274C9886F3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E2824AE-EFE1-4486-992D-4274C9886F3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E2824AE-EFE1-4486-992D-4274C9886F3B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADDA37E6-16C3-414F-A8E7-5DE3A4882A4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADDA37E6-16C3-414F-A8E7-5DE3A4882A4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADDA37E6-16C3-414F-A8E7-5DE3A4882A4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADDA37E6-16C3-414F-A8E7-5DE3A4882A4A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DF4A83A-0EF8-4CD1-A37B-E8FB828D8C01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DF4A83A-0EF8-4CD1-A37B-E8FB828D8C01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DF4A83A-0EF8-4CD1-A37B-E8FB828D8C01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DF4A83A-0EF8-4CD1-A37B-E8FB828D8C01}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B4F6D5A-BCDE-44D5-9C88-4BDA30BB6BD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B4F6D5A-BCDE-44D5-9C88-4BDA30BB6BD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B4F6D5A-BCDE-44D5-9C88-4BDA30BB6BD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B4F6D5A-BCDE-44D5-9C88-4BDA30BB6BD1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5993A41F-BBBB-4885-AEE6-E77F8704F506}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5993A41F-BBBB-4885-AEE6-E77F8704F506}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5993A41F-BBBB-4885-AEE6-E77F8704F506}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5993A41F-BBBB-4885-AEE6-E77F8704F506}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7760C7D3-806E-44EC-8E75-40493A4B234B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7760C7D3-806E-44EC-8E75-40493A4B234B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7760C7D3-806E-44EC-8E75-40493A4B234B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7760C7D3-806E-44EC-8E75-40493A4B234B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1A91669-05C0-4E2A-9DD4-87ABEE163040}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1A91669-05C0-4E2A-9DD4-87ABEE163040}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1A91669-05C0-4E2A-9DD4-87ABEE163040}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1A91669-05C0-4E2A-9DD4-87ABEE163040}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD676AA7-4030-4D4A-87C4-8435A3CD4CE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD676AA7-4030-4D4A-87C4-8435A3CD4CE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD676AA7-4030-4D4A-87C4-8435A3CD4CE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD676AA7-4030-4D4A-87C4-8435A3CD4CE0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4BA812BD-C975-4E9F-853B-F1117AB0157B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BA812BD-C975-4E9F-853B-F1117AB0157B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4BA812BD-C975-4E9F-853B-F1117AB0157B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4BA812BD-C975-4E9F-853B-F1117AB0157B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60E384C7-5C92-4CEE-9F3C-2DB92D6B3609}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60E384C7-5C92-4CEE-9F3C-2DB92D6B3609}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60E384C7-5C92-4CEE-9F3C-2DB92D6B3609}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60E384C7-5C92-4CEE-9F3C-2DB92D6B3609}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6E08B436-E6FF-4414-A85B-59D8AC027B44} = {D4263C1F-3E25-4EF0-AB65-03A4A6D0FDBD}
+		{FEEF7656-92E4-462C-B516-C41BD00757C9} = {6E08B436-E6FF-4414-A85B-59D8AC027B44}
+		{5F1C238C-B7F3-4EEC-B757-BE8CAE0A43D6} = {0B23D75D-C8FE-48E7-901B-09026FC8B07E}
+		{17898BC2-B0A3-4742-8F85-523DC08B0107} = {C2AB99D1-6F31-4D77-AF3F-F8D6E31CCF25}
+		{07C20F57-75D0-444F-8BBD-EA2A9C2712B3} = {17898BC2-B0A3-4742-8F85-523DC08B0107}
+		{9E2824AE-EFE1-4486-992D-4274C9886F3B} = {17898BC2-B0A3-4742-8F85-523DC08B0107}
+		{ADDA37E6-16C3-414F-A8E7-5DE3A4882A4A} = {17898BC2-B0A3-4742-8F85-523DC08B0107}
+		{3DF4A83A-0EF8-4CD1-A37B-E8FB828D8C01} = {17898BC2-B0A3-4742-8F85-523DC08B0107}
+		{A8204CE0-FE88-445A-887B-4A2D92D9D78F} = {C2AB99D1-6F31-4D77-AF3F-F8D6E31CCF25}
+		{9B4F6D5A-BCDE-44D5-9C88-4BDA30BB6BD1} = {A8204CE0-FE88-445A-887B-4A2D92D9D78F}
+		{5993A41F-BBBB-4885-AEE6-E77F8704F506} = {A8204CE0-FE88-445A-887B-4A2D92D9D78F}
+		{7760C7D3-806E-44EC-8E75-40493A4B234B} = {A8204CE0-FE88-445A-887B-4A2D92D9D78F}
+		{C1A91669-05C0-4E2A-9DD4-87ABEE163040} = {A8204CE0-FE88-445A-887B-4A2D92D9D78F}
+		{CD676AA7-4030-4D4A-87C4-8435A3CD4CE0} = {EDA39353-B1A1-4460-8EAC-C502101A5164}
+		{4BA812BD-C975-4E9F-853B-F1117AB0157B} = {08BC1AD7-7A4C-47DF-9A1B-31FC63122BCC}
+		{60E384C7-5C92-4CEE-9F3C-2DB92D6B3609} = {08BC1AD7-7A4C-47DF-9A1B-31FC63122BCC}
+	EndGlobalSection
+EndGlobal
