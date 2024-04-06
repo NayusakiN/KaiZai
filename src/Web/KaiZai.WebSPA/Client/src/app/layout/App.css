@@ -1,11 +1,40 @@
 #root {
-  max-width: 1280px;
-  padding: 10px !important;
+  max-width: 1200px !important;
   text-align: center;
 }
 
-#main-container {
-  margin: 2% 17.7rem 2%;
+#app-main-features-container {
+  top: 2%;
+  margin: 0;
+  height: 94%;
+  position: absolute;
+  transform: translateX(27px);
+  -moz-transform: translateX(27px);
+}
+@media screen and (min-width: 800px) {
+#app-feature-related-container {
+  margin-left: 225px !important;
+}}
+
+@media screen and (min-width: 1200px) {
+  #app-feature-related-container {
+    transform: translateX(3%);
+    -moz-transform: translateX(3%);
+  }
+}
+
+@media screen and (min-width: 1450px) {
+  #app-feature-related-container {
+    transform: translateX(4,5%);
+    -moz-transform: translateX(4,5%);
+  }
+}
+
+@media screen and (min-width: 1700px) {
+  #app-feature-related-container {
+    transform: translateX(25%);
+    -moz-transform: translateX(9%);
+  }
 }
 
 .logo {
