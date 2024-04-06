@@ -5,11 +5,13 @@
 // import NotFound from "../errors/NotFound";
 // import ServerError from "../errors/ServerError";
 import App from "../layout/App";
+import Login from "../../features/account/Login";
 import IncomesTransactions from "../../features/incomes/IncomesTransactions";
 import Dashboard from "../../features/dashboard/Dashboard";
+import { createBrowserRouter } from 'react-router-dom';
 // import RequireAuth from "./RequireAuth";
 
-export const router = createBrowserRouter([
+export const router = createBrowserRouter(([
     {
         path: '/',
         element: <App />,
@@ -31,9 +33,9 @@ export const router = createBrowserRouter([
             // {path: 'server-error', element: <ServerError />},
             // {path: 'not-found', element: <NotFound />},
             // {path: 'basket', element: <BasketPage />},
-            // {path: 'login', element: <Login />},
+            {path: 'login', element: <Login />},
             // {path: 'register', element: <Register />},
             // {path: '*', element: <Navigate replace to='/not-found' />}
         ]
     }
-])
+]))
