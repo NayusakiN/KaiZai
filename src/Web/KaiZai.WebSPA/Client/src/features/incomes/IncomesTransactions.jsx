@@ -11,11 +11,14 @@ import {
   ListHeader,
   ListContent,
   Image,
+  Icon,
+  Label,
   List,
+  ListDescription,
 } from 'semantic-ui-react';
 import IncomesItems from "./IncomesItems";
 import { format, subMonths, startOfMonth, isFirstDayOfMonth } from "date-fns";
-import { PieChart, Pie, Sector, Cell, ResponsiveContainer } from 'recharts';
+import { PieChart, Tooltip, Pie, Sector, Cell, XAxis, ResponsiveContainer } from 'recharts';
 
 export default function IncomesTransactions() {
   const dispatch = useDispatch();
@@ -65,86 +68,117 @@ export default function IncomesTransactions() {
 
   return (
     <Grid container>
-      <GridRow columns={2} className="feature-content-section">
+      <GridRow
+        verticalAlign="middle"
+        centered
+        columns={2}
+        className="feature-content-section"
+      >
         <GridColumn className="centered-chart">
           <ResponsiveContainer>
-          <PieChart >
-            <Pie
-              data={data}
-              cx="50%"
-              cy="50%"
-                labelLine={false}
-                
-              label={renderCustomizedLabel}
-              fill="#FF8042"
-              dataKey="value"
-            >
-              {data.map((entry, index) => (
-                <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
-              ))}
-            </Pie>
+            <PieChart>
+              <Pie
+                data={data}
+                cx="50%"
+                cy="50%"
+                innerRadius={"72%"}
+                outerRadius={"98%"}
+                fill="#8884d8"
+                nameKey="asasasa"
+                paddingAngle={5}
+                dataKey="value"
+              >
+                {data.map((entry, index) => (
+                  <Cell
+                    key={`cell-${index}`}
+                    fill={COLORS[index % COLORS.length]}
+                  />
+                ))}
+              </Pie>
             </PieChart>
-            </ResponsiveContainer>
+            <div className="income-amount absolute-centered">
+              <h1>+2500$</h1>
+            </div>
+          </ResponsiveContainer>
         </GridColumn>
-        <GridColumn
-          verticalAlign="middle">
+        <GridColumn width={5}>
           <List
-            size='medium'
-            relaxed={{ relaxed:true }}
-            className="chart-data-list scrolled-list" animated divided>
+            divided
+            size="small"
+            relaxed={{ relaxed: true }}
+            className="vertical-scrolled-content"
+          >
             <ListItem>
-            <Image src='https://react.semantic-ui.com/images/wireframe/square-image.png' avatar />
-              <ListContent>
-                <ListHeader>Helen</ListHeader>
+              <ListContent
+                floated="right"
+                className="income-amount relative-vertical-centered"
+              >
+                255$
               </ListContent>
+              <ListHeader>
+                <Label circular horizontal size="big" color="orange">
+                  <Icon
+                    fitted={true}
+                    size="small"
+                    name="money bill alternate outline"
+                  />
+                </Label>
+                Salary
+              </ListHeader>
             </ListItem>
             <ListItem>
-            <Image src='https://react.semantic-ui.com/images/wireframe/square-image.png' avatar />
-              <ListContent>
-                <ListHeader>Christian</ListHeader>
+              <ListContent
+                floated="right"
+                className="income-amount relative-vertical-centered"
+              >
+                455$
               </ListContent>
+              <ListHeader>
+                <Label circular horizontal size="big" color="blue">
+                  <Icon
+                    fitted={true}
+                    size="small"
+                    name="money bill alternate outline"
+                  />
+                </Label>
+                Salary
+              </ListHeader>
             </ListItem>
             <ListItem>
-              <Image src='https://react.semantic-ui.com/images/wireframe/square-image.png' avatar />
-              <ListContent>
-                <ListHeader>Daniel</ListHeader>
+              <ListContent
+                floated="right"
+                className="income-amount relative-vertical-centered"
+              >
+                255$
               </ListContent>
+              <ListHeader >
+                <Label circular horizontal size="big" color="green">
+                  <Icon
+                    fitted={true}
+                    size="small"
+                    name="money bill alternate outline"
+                  />
+                </Label>
+                Salary
+              </ListHeader>
             </ListItem>
             <ListItem>
-              <Image src='https://react.semantic-ui.com/images/wireframe/square-image.png' avatar />
-              <ListContent>
-                <ListHeader>Daniel</ListHeader>
+              <ListContent
+                floated="right"
+                className="income-amount relative-vertical-centered"
+              >
+                255$
               </ListContent>
-            </ListItem>
-            <ListItem>
-              <Image src='https://react.semantic-ui.com/images/wireframe/square-image.png' avatar />
-              <ListContent>
-                <ListHeader>Daniel</ListHeader>
-              </ListContent>
-            </ListItem>
-            <ListItem>
-              <Image src='https://react.semantic-ui.com/images/wireframe/square-image.png' avatar />
-              <ListContent>
-                <ListHeader>Daniel</ListHeader>
-              </ListContent>
-            </ListItem>
-            <ListItem>
-              <Image src='https://react.semantic-ui.com/images/wireframe/square-image.png' avatar />
-              <ListContent>
-                <ListHeader>Daniel</ListHeader>
-              </ListContent>
-            </ListItem>
-            <ListItem>
-              <Image src='https://react.semantic-ui.com/images/wireframe/square-image.png' avatar />
-              <ListContent>
-                <ListHeader>Daniel</ListHeader>
-              </ListContent>
-            </ListItem>
-            <ListItem>
-              <Image src='https://react.semantic-ui.com/images/wireframe/square-image.png' avatar />
-              <ListContent>
-                <ListHeader>Daniel</ListHeader>
-              </ListContent>
+              <ListHeader >
+                <Label circular horizontal size="big" color="green">
+                  <Icon
+                    fitted={true}
+                    size="small"
+                    name="money bill alternate outline"
+                  />
+                </Label>
+                Salary
+              </ListHeader>
             </ListItem>
           </List>
         </GridColumn>
@@ -152,7 +186,7 @@ export default function IncomesTransactions() {
       <Divider hidden />
       <GridRow className="feature-content-section">
         <GridColumn>
-                {/* //TODO change style for background color */}
+          {/* //TODO change style for background color */}
           <DatePicker
             showIcon
             selectsRange={true}
@@ -160,19 +194,20 @@ export default function IncomesTransactions() {
             endDate={curViewEndDate}
             onChange={(selectedDateRange) => {
               setCurViewDateRange(selectedDateRange);
-              let isNotNullDate = dateValue => dateValue != null;
+              let isNotNullDate = (dateValue) => dateValue != null;
               if (selectedDateRange.every(isNotNullDate))
-                handleDateRangeChange(selectedDateRange)
+                handleDateRangeChange(selectedDateRange);
             }}
             isClearable={true}
           />
           {/* TODO add states of loading */}
           <IncomesItems />
           <Pagination
-            style={{ background: '#8f48c7' }}
+            style={{ background: "#8f48c7" }}
             onPageChange={handlePageChange}
             defaultActivePage={curViewPage}
-            totalPages={pageSize} />
+            totalPages={pageSize}
+          />
         </GridColumn>
       </GridRow>
     </Grid>
