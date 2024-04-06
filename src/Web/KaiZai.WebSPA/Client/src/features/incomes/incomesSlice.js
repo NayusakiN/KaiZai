@@ -3,23 +3,9 @@ import { createEntityAdapter, createSelector, createSlice, useDispatch } from "@
 import { apiSlice } from "../../app/api/apiSlice.js";
 import { format, subMonths, startOfMonth, isFirstDayOfMonth } from "date-fns";
 
-// Entity adapter
-const incomesAdapter = createEntityAdapter({
-  selectId: (income) => income.id
-});
 
-// Initial state for incomes data view settings
-const incomesViewSettingsInitialState = {
-  incomesLoaded: false,
-  filtersLoaded: false,
-  pagingParams: initPaginationParams(),
-  filteringParams: initFilteringParams(),
-};
 
-// Initial state for incomes data
-const incomesInitialState = incomesAdapter.getInitialState({
-  metadata: null
-});
+
 
 //TODO: change test values to original 
 // Helper function to get default date limit
@@ -54,6 +40,24 @@ function initFilteringParams() {
     endDate: getDefaultDateLimit(false)
   };
 }
+
+// Entity adapter
+const incomesAdapter = createEntityAdapter({
+  selectId: (income) => income.id
+});
+
+// Initial state for incomes data
+const incomesInitialState = incomesAdapter.getInitialState({
+  metadata: null
+});
+
+// Initial state for incomes data view settings
+const incomesViewSettingsInitialState = {
+  incomesLoaded: false,
+  filtersLoaded: false,
+  pagingParams: initPaginationParams(),
+  filteringParams: initFilteringParams(),
+};
 
 // API endpoint configuration
 const featureBaseUrlPath = '/incomes';
