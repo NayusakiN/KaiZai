@@ -1,13 +1,14 @@
 import ReactDOM from 'react-dom/client'
-import App from './app/layout/App.jsx'
 import './index.css'
 import 'semantic-ui-less/semantic.less'
-import { Provider } from 'react-redux'
+import { router } from './app/router/Routes';
+import { Provider } from 'react-redux';
+import { RouterProvider } from 'react-router-dom';
 import { store } from  './app/stores/configureStore'
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-      <Provider store={store}>
-        <App />
+  <Provider store={store}>
+        <RouterProvider router={router} />
       </Provider>
 )
