@@ -1,17 +1,24 @@
 import { useState } from 'react'
 import {
-    Menu, Image
+    Menu, Image, Dropdown, Icon
 } from "semantic-ui-react";
 
 export default function MainMenu() {
+    
     // eslint-disable-next-line no-unused-vars
-    const [activeMenuItem, setActiveMenuItem] = useState("expenses");
+    const [activeMenuItem, setActiveMenuItem] = useState("dashboard");
     return (
-        <Menu
-            vertical fixed='left'
-            inverted style={{ background: '#7d38b3', marginLeft: '1.2em' }}>
+            <>
+            <Menu
+                fixed='left'
+                vertical
+                inverted
+                className='left-menu'
+                style={{ background: '#7d38b3' }}>
             <Menu.Item header={true}>
-                <Image src='https://react.semantic-ui.com/images/wireframe/square-image.png' avatar />
+                <Image
+                    centered
+                    src='https://react.semantic-ui.com/images/wireframe/square-image.png' avatar />
                 &nbsp;&nbsp;Makoto Edamura
             </Menu.Item>
             <Menu.Item
@@ -32,5 +39,28 @@ export default function MainMenu() {
                 active={activeMenuItem === 'expenses'}>
                 Expenses
             </Menu.Item>
-        </Menu>)
+            </Menu>
+            <Menu
+                fixed='top'
+                inverted
+                className='top-menu'
+                style={{ background: '#7d38b3' }}>
+                    
+                <Dropdown item icon={<Icon name='bars' />}>
+                    <Dropdown.Menu style={{ width: '200px !important' }} fluid >
+        <Dropdown.Item >  <Image
+                    centered
+                    src='https://react.semantic-ui.com/images/wireframe/square-image.png' avatar />
+                &nbsp;Makoto Edamura</Dropdown.Item>
+        <Dropdown.Divider />
+        <Dropdown.Header>Dropdown</Dropdown.Header>
+        <Dropdown.Item>Option 1</Dropdown.Item>
+        <Dropdown.Item>Option 2</Dropdown.Item>
+        <Dropdown.Item>Option 3</Dropdown.Item>
+      </Dropdown.Menu>
+    </Dropdown>
+ 
+            </Menu>
+            </>
+)
 }
