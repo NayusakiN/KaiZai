@@ -1,0 +1,17 @@
+/*******************************
+         Site Overrides
+*******************************/
+
+.ui.menu.fixed,
+{
+  border-radius: 15px !important;
+}
+
+.ui.menu.fixed .item:first-child {
+  border-radius: 15px 15px 0px 0px !important;
+}
+
+.ui.menu .dropdown.item .menu {
+  min-width: 100%;
+  background: #7d38b3;
+}

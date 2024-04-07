@@ -1,0 +1,8 @@
+/*******************************
+    User Variable Overrides
+*******************************/
+@invertedActiveColor: #f2eef4;
+@itemTextColor: #f2eef4;
+@paginationActiveTextColor: #f2eef4;
+@invertedActiveHoverColor: #f2eef4;
+@hoverItemTextColor: #f2eef4;

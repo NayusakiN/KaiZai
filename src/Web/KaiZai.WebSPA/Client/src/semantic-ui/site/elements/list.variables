@@ -1,0 +1,5 @@
+/*******************************
+    User Variable Overrides
+*******************************/
+@itemHeaderColor: #f2eef4;
+@itemDescriptionColor: #f2eef4;

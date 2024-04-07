@@ -1,0 +1,54 @@
+.centered-chart {
+    margin: auto;
+    height: 19rem;
+    width: 19rem;
+}
+
+.feature-content-section {
+    border-radius: 15px;
+    background: #5f1a95;
+    padding: 1.5em;
+}
+
+.vertical-scrolled-content {
+    height: 150px;
+    overflow-y: auto;
+}
+
+@media screen and (max-width: 800px) {
+.left-menu {
+    visibility: collapse;
+}}
+
+@media screen and (min-width: 800px) {
+    .top-menu {
+        visibility: collapse;
+    }}
+
+/* //TODO: think about other ways for top marg */
+.relative-vertical-centered {
+  position: relative;
+  top: 0.9em;
+}
+
+.absolute-centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+  
+
+.income-amount{
+    font-weight: bold;
+    color: #4ef745
+}
+
+.expense-amount{
+    font-weight: bold;
+    color: #f74595
+}
+
+.react-datepicker__day--selected, .react-datepicker__day--in-selecting-range, .react-datepicker__day--in-range, .react-datepicker__month-text--selected, .react-datepicker__month-text--in-selecting-range, .react-datepicker__month-text--in-range, .react-datepicker__quarter-text--selected, .react-datepicker__quarter-text--in-selecting-range, .react-datepicker__quarter-text--in-range, .react-datepicker__year-text--selected, .react-datepicker__year-text--in-selecting-range, .react-datepicker__year-text--in-range {
+    background: #5f1a95 !important;
+}

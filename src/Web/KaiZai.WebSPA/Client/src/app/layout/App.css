@@ -1,0 +1,66 @@
+#root {
+  max-width: 1200px !important;
+  text-align: center;
+}
+
+#app-main-features-container {
+  top: 2%;
+  margin: 0;
+  height: 94%;
+  position: absolute;
+  transform: translateX(27px);
+  -moz-transform: translateX(27px);
+}
+@media screen and (min-width: 800px) {
+#app-feature-related-container {
+  margin-left: 225px !important;
+}}
+
+@media screen and (min-width: 1200px) {
+  #app-feature-related-container {
+    transform: translateX(3%);
+    -moz-transform: translateX(3%);
+  }
+}
+
+@media screen and (min-width: 1450px) {
+  #app-feature-related-container {
+    transform: translateX(4,5%);
+    -moz-transform: translateX(4,5%);
+  }
+}
+
+@media screen and (min-width: 1700px) {
+  #app-feature-related-container {
+    transform: translateX(25%);
+    -moz-transform: translateX(9%);
+  }
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
