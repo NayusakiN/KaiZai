@@ -10,8 +10,8 @@
     padding: 1.5em;
 }
 
-.vertical-scrolled-content {
-    height: 150px;
+.vertical-scrollable-content {
+    height: 200px;
     overflow-y: auto;
 }
 
@@ -52,3 +52,21 @@
 .react-datepicker__day--selected, .react-datepicker__day--in-selecting-range, .react-datepicker__day--in-range, .react-datepicker__month-text--selected, .react-datepicker__month-text--in-selecting-range, .react-datepicker__month-text--in-range, .react-datepicker__quarter-text--selected, .react-datepicker__quarter-text--in-selecting-range, .react-datepicker__quarter-text--in-range, .react-datepicker__year-text--selected, .react-datepicker__year-text--in-selecting-range, .react-datepicker__year-text--in-range {
     background: #5f1a95 !important;
 }
+
+.hoverable-row:hover {
+    background: rgb(125, 56, 179, 0.4) !important; /* Change the background color to your desired color */
+    border-radius: 15px !important;
+}
+
+.column {
+    color: #f2eef4;
+}
+
+.overflow-ellipsis {
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden; /* Hide any overflowed text */
+    text-overflow: ellipsis; /* Display ellipsis (...) for overflowed text */
+  }
+  .right-aligned {
+    text-align: right;
+  }
