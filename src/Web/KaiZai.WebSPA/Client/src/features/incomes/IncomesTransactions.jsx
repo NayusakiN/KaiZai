@@ -7,7 +7,14 @@ import "react-datepicker/dist/react-datepicker.css";
 import { useDispatch, useSelector } from "react-redux";
 import { setPageNumber } from "./incomesSlice";
 import {
-  Pagination, Divider, SegmentGroup, Segment, GridRow, GridColumn, Grid, ListItem,
+  Pagination,
+  Divider,
+  SegmentGroup,
+  Segment,
+  GridRow,
+  GridColumn,
+  Grid,
+  ListItem,
   ListHeader,
   ListContent,
   Image,
@@ -15,21 +22,34 @@ import {
   Label,
   List,
   ListDescription,
-} from 'semantic-ui-react';
+} from "semantic-ui-react";
 import IncomesItems from "./IncomesItems";
 import { format, subMonths, startOfMonth, isFirstDayOfMonth } from "date-fns";
-import { PieChart, Tooltip, Pie, Sector, Cell, XAxis, ResponsiveContainer } from 'recharts';
+import {
+  PieChart,
+  Tooltip,
+  Pie,
+  Sector,
+  Cell,
+  XAxis,
+  ResponsiveContainer,
+} from "recharts";
 
 export default function IncomesTransactions() {
   const dispatch = useDispatch();
   //TODO: Test later
-  const { pagingParams, filteringParams } = useSelector((state) => state.incomesDataViewSettings);
+  const { pagingParams, filteringParams } = useSelector(
+    (state) => state.incomesDataViewSettings
+  );
   const { startDate, endDate } = filteringParams;
   const { pageNumber, pageSize } = pagingParams;
 
   const [curPageSize, setCurPageSize] = useState(pageSize);
   const [curViewPage, setCurViewNextPage] = useState(pageNumber);
-  const [curViewDateRange, setCurViewDateRange] = useState([new Date(startDate), new Date(endDate)]);
+  const [curViewDateRange, setCurViewDateRange] = useState([
+    new Date(startDate),
+    new Date(endDate),
+  ]);
   const [curViewStartDate, curViewEndDate] = curViewDateRange;
 
   const handlePageChange = (event, data) => {
@@ -45,22 +65,35 @@ export default function IncomesTransactions() {
   };
 
   const data = [
-    { name: 'Group A', value: 400 },
-    { name: 'Group B', value: 300 },
-    { name: 'Group C', value: 300 },
-    { name: 'Group D', value: 200 },
+    { name: "Group A", value: 400 },
+    { name: "Group B", value: 300 },
+    { name: "Group C", value: 300 },
+    { name: "Group D", value: 200 },
   ];
 
-  const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042'];
+  const COLORS = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042"];
 
   const RADIAN = Math.PI / 180;
-  const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, percent }) => {
+  const renderCustomizedLabel = ({
+    cx,
+    cy,
+    midAngle,
+    innerRadius,
+    outerRadius,
+    percent,
+  }) => {
     const radius = innerRadius + (outerRadius - innerRadius) * 0.5;
     const x = cx + radius * Math.cos(-midAngle * RADIAN);
     const y = cy + radius * Math.sin(-midAngle * RADIAN);
 
     return (
-      <text x={x} y={y} fill="white" textAnchor={x > cx ? 'start' : 'end'} dominantBaseline="central">
+      <text
+        x={x}
+        y={y}
+        fill="white"
+        textAnchor={x > cx ? "start" : "end"}
+        dominantBaseline="central"
+      >
         {`${(percent * 100).toFixed(0)}%`}
       </text>
     );
@@ -106,79 +139,87 @@ export default function IncomesTransactions() {
             divided
             size="small"
             relaxed={{ relaxed: true }}
-            className="vertical-scrolled-content"
+            className="vertical-scrollable-content"
           >
             <ListItem>
-              <ListContent
-                floated="right"
-                className="income-amount relative-vertical-centered"
-              >
-                255$
-              </ListContent>
-              <ListHeader>
-                <Label circular horizontal size="big" color="orange">
-                  <Icon
-                    fitted={true}
-                    size="small"
-                    name="money bill alternate outline"
-                  />
-                </Label>
-                Salary
-              </ListHeader>
+              <h4>
+                <ListContent
+                  floated="right"
+                  className="income-amount relative-vertical-centered"
+                >
+                  255$
+                </ListContent>
+                <ListHeader>
+                  <Label circular horizontal size="big" color="orange">
+                    <Icon
+                      fitted={true}
+                      size="small"
+                      name="money bill alternate outline"
+                    />
+                  </Label>
+                  Salary
+                </ListHeader>
+              </h4>
             </ListItem>
             <ListItem>
-              <ListContent
-                floated="right"
-                className="income-amount relative-vertical-centered"
-              >
-                455$
-              </ListContent>
-              <ListHeader>
-                <Label circular horizontal size="big" color="blue">
-                  <Icon
-                    fitted={true}
-                    size="small"
-                    name="money bill alternate outline"
-                  />
-                </Label>
-                Salary
-              </ListHeader>
+              <h4>
+                <ListContent
+                  floated="right"
+                  className="income-amount relative-vertical-centered"
+                >
+                  455$
+                </ListContent>
+                <ListHeader>
+                  <Label circular horizontal size="big" color="blue">
+                    <Icon
+                      fitted={true}
+                      size="small"
+                      name="money bill alternate outline"
+                    />
+                  </Label>
+                  Salary
+                </ListHeader>
+              </h4>
             </ListItem>
             <ListItem>
-              <ListContent
-                floated="right"
-                className="income-amount relative-vertical-centered"
-              >
-                255$
-              </ListContent>
-              <ListHeader >
-                <Label circular horizontal size="big" color="green">
-                  <Icon
-                    fitted={true}
-                    size="small"
-                    name="money bill alternate outline"
-                  />
-                </Label>
-                Salary
-              </ListHeader>
+              <h4>
+                <ListContent
+                  floated="right"
+                  className="income-amount relative-vertical-centered"
+                >
+                  455$
+                </ListContent>
+                <ListHeader>
+                  <Label circular horizontal size="big" color="blue">
+                    <Icon
+                      fitted={true}
+                      size="small"
+                      name="money bill alternate outline"
+                    />
+                  </Label>
+                  Salary
+                </ListHeader>
+              </h4>
             </ListItem>
             <ListItem>
-              <ListContent
-                floated="right"
-                className="income-amount relative-vertical-centered"
-              >
-                255$
-              </ListContent>
-              <ListHeader >
-                <Label circular horizontal size="big" color="green">
-                  <Icon
-                    fitted={true}
-                    size="small"
-                    name="money bill alternate outline"
-                  />
-                </Label>
-                Salary
-              </ListHeader>
+              <h4>
+                <ListContent
+                  floated="right"
+                  className="income-amount relative-vertical-centered"
+                >
+                  455$
+                </ListContent>
+                <ListHeader>
+                  <Label circular horizontal size="big" color="blue">
+                    <Icon
+                      fitted={true}
+                      size="small"
+                      name="money bill alternate outline"
+                    />
+                  </Label>
+                  Salary
+                </ListHeader>
+              </h4>
             </ListItem>
           </List>
         </GridColumn>
@@ -186,22 +227,27 @@ export default function IncomesTransactions() {
       <Divider hidden />
       <GridRow className="feature-content-section">
         <GridColumn>
+        <Divider hidden />
           {/* //TODO change style for background color */}
-          <DatePicker
-            showIcon
-            selectsRange={true}
-            startDate={curViewStartDate}
-            endDate={curViewEndDate}
-            onChange={(selectedDateRange) => {
-              setCurViewDateRange(selectedDateRange);
-              let isNotNullDate = (dateValue) => dateValue != null;
-              if (selectedDateRange.every(isNotNullDate))
-                handleDateRangeChange(selectedDateRange);
-            }}
-            isClearable={true}
-          />
+          <div className="right-aligned">
+    <DatePicker
+      showIcon
+      selectsRange={true}
+      startDate={curViewStartDate}
+      endDate={curViewEndDate}
+      onChange={(selectedDateRange) => {
+        setCurViewDateRange(selectedDateRange);
+        let isNotNullDate = (dateValue) => dateValue != null;
+        if (selectedDateRange.every(isNotNullDate))
+          handleDateRangeChange(selectedDateRange);
+      }}
+      isClearable={true}
+    />
+  </div>
+          <Divider hidden />
           {/* TODO add states of loading */}
           <IncomesItems />
+          <Divider hidden />
           <Pagination
             style={{ background: "#8f48c7" }}
             onPageChange={handlePageChange}
