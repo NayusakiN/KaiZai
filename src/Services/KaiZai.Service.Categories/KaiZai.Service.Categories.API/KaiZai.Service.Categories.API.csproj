@@ -9,7 +9,7 @@
 
   <ItemGroup>
     <PackageReference Include="KaiZai.Types" Version="1.0.0" />
-    <PackageReference Include="KaiZai.MessageExchangeBaseConfigurator" Version="1.0.1" />
+    <PackageReference Include="KaiZai.MessageExchangeBaseConfigurator" Version="1.0.11" />
     <PackageReference Include="KaiZai.MongoDataAccessRepository" Version="1.0.12" />
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.6" />
     <PackageReference Include="Serilog.AspNetCore" Version="8.0.2-dev-00338" />
