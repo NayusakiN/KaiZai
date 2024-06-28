@@ -2,7 +2,7 @@ syntax = "proto3";
 
 option csharp_namespace = "GrpcIncomes";
 
-import "google/protobuf/Timestamp.proto";
+import "google/protobuf/timestamp.proto";
 import "google/protobuf/any.proto";
 import "google/protobuf/empty.proto";
 import "types.proto";
