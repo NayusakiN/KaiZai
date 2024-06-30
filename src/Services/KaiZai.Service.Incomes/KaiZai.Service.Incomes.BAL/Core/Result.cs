@@ -106,8 +106,8 @@ public sealed record Result
     /// <summary>
     /// Creates a new failed result with the specified error messages.
     /// </summary>
-    /// <param name="userError">The user error message describing the failure.</param>
     /// <param name="systemError">The exception error message describing the failure.</param>
+    /// <param name="userError">The user error message describing the failure.</param>
     /// <returns>A failed result instance.</returns>
-    public static Result Failure(string? userError, string systemError) => new Result { ProcessStatus = ProcessStatus.SystemError, UserError = userError, SystemError = systemError };
+    public static Result Failure(string systemError, string? userError) => new Result { ProcessStatus = ProcessStatus.SystemError, UserError = userError, SystemError = systemError };
 }
