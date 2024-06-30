@@ -1,14 +1,16 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net7.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-        <DocumentationFile>bin\Debug\net7.0\KaiZai.Service.Common.MongoDataAccessRepository.xml</DocumentationFile>
+    <DocumentationFile>bin\Debug\net8.0\KaiZai.Service.Common.MongoDataAccessRepository.xml</DocumentationFile>
+    <PackageId>KaiZai.MongoDataAccessRepository</PackageId>
+    <Authors>MasayukiN</Authors>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="7.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0" />
     <PackageReference Include="MongoDB.Driver" Version="2.21.0" />
   </ItemGroup>
 

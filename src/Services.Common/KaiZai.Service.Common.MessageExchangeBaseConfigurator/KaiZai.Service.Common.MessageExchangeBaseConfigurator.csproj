@@ -1,16 +1,18 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net7.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <DocumentationFile>bin\Debug\net7.0\KaiZai.Service.Common.MessageExchangeBaseConfigurator.xml</DocumentationFile>
+    <DocumentationFile>bin\Debug\net8.0\KaiZai.Service.Common.MessageExchangeBaseConfigurator.xml</DocumentationFile>
+    <PackageId>KaiZai.MessageExchangeBaseConfigurator</PackageId>
+    <Authors>MasayukiN</Authors>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="MassTransit.AspNetCore" Version="7.3.1" />
-    <PackageReference Include="MassTransit.RabbitMQ" Version="7.3.1" />
-    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="7.0.0" />
+    <PackageReference Include="MassTransit.RabbitMQ" Version="8.2.4-develop.1856" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0" />
+    <PackageReference Include="System.Threading.Channels" Version="8.0.0" />
   </ItemGroup>
 
 </Project>

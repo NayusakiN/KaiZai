@@ -2,13 +2,14 @@
 
   <ItemGroup>
     <ProjectReference Include="..\KaiZai.Service.Incomes.DAL\KaiZai.Service.Incomes.DAL.csproj" />
-    <PackageReference Include="KaiZai.Service.Categories.Contracts" Version="1.0.33" />
+    <PackageReference Include="KaiZai.Categories.Contracts" Version="1.0.0" />
   </ItemGroup>
 
   <PropertyGroup>
-    <TargetFramework>net7.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>disable</Nullable>
+    <LangVersion>12</LangVersion>
   </PropertyGroup>
 
 </Project>
