@@ -1,6 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit';
-import { apiSlice } from '../api/apiSlice';
-import incomesDataViewSettingsReducer from '../../features/incomes/incomesSlice';
+import { apiSlice } from '../api/apiSlice.js';
+import incomesDataViewSettingsReducer from '../../features/incomes/incomesSlice.js';
 
 export const store = configureStore({
     reducer: {
