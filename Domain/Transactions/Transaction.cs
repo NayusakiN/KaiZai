@@ -1,21 +1,21 @@
 using Domain.Categories;
+using SharedKernel;
 
 namespace Domain.Transactions;
 
-public sealed class Transaction
+public sealed class Transaction : Entity
 {
-    public long Id { get; private set; }
     public Money Amount { get; private set; }
     public string Description { get; private set; }
     public DateTime Date { get; private set; }
-    public long CategoryId { get; private set; }
+    public Guid CategoryId { get; private set; }
     public Category Category { get; private set; }
-    public long UserId { get; private set; }
+    public Guid UserId { get; private set; }
 
     private Transaction() { } // For EF Core
 
     public Transaction(Money amount, string description,
-        Category category, long userId)
+        Category category, Guid userId)
     {
         Amount = amount ?? throw new ArgumentNullException(nameof(amount));
         Description = description ?? throw new ArgumentNullException(nameof(description));
