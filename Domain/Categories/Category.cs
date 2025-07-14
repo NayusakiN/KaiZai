@@ -1,3 +1,4 @@
+using Domain.Transactions;
 using SharedKernel;
 
 namespace Domain.Categories;
@@ -7,16 +8,18 @@ public sealed class Category : Entity
     public Guid UserId { get; private set; }
     public Icon Icon { get; private set; }
     public string Name { get; private set; }
-    public string Description { get; private set; } = string.Empty;
+    public string? Description { get; private set; }
     public CategoryType CategoryType { get; private set; }
     public DateTime CreatedAt { get; private set; }
     public DateTime? UpdatedAt { get; private set; } // Add last update timestamp
+    
+    public IEnumerable<Transaction> Transactions { get; private set; } = new List<Transaction>();
     public bool IsActive { get; private set; } = true; // Add active flag instead of deletion
 
     // For EF Core
     private Category() { }
 
-    public Category(string name, Guid userId, Icon icon, CategoryType categoryType)
+    public Category(string name, Guid userId, Icon icon, CategoryType categoryType, string? description = null)
     {
         if (string.IsNullOrWhiteSpace(name))
             throw new ArgumentException("Category name cannot be empty", nameof(name));
@@ -31,6 +34,7 @@ public sealed class Category : Entity
         UserId = userId;
         CategoryType = categoryType;
         CreatedAt = DateTime.UtcNow;
+        Description = description;
     }
     
     public void UpdateIcon(Icon newIcon)

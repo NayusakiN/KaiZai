@@ -5,8 +5,8 @@ namespace Domain.Transactions;
 
 public sealed class Transaction : Entity
 {
-    public Money Amount { get; private set; }
-    public string Description { get; private set; }
+    public Money Money { get; private set; }
+    public string? Description { get; private set; }
     public DateTime Date { get; private set; }
     public Guid CategoryId { get; private set; }
     public Category Category { get; private set; }
@@ -14,10 +14,10 @@ public sealed class Transaction : Entity
 
     private Transaction() { } // For EF Core
 
-    public Transaction(Money amount, string description,
+    public Transaction(Money money, string description,
         Category category, Guid userId)
     {
-        Amount = amount ?? throw new ArgumentNullException(nameof(amount));
+        Money = money ?? throw new ArgumentNullException(nameof(money));
         Description = description ?? throw new ArgumentNullException(nameof(description));
         Date = DateTime.Now.ToUniversalTime();
         Category = category ?? throw new ArgumentNullException(nameof(category));
@@ -25,9 +25,9 @@ public sealed class Transaction : Entity
         UserId = userId;
     }
 
-    public void UpdateAmount(Money newAmount)
+    public void UpdateAmount(Money newMoney)
     {
-        Amount = newAmount ?? throw new ArgumentNullException(nameof(newAmount));
+        Money = newMoney ?? throw new ArgumentNullException(nameof(newMoney));
     }
 
     public void UpdateDescription(string newDescription)
